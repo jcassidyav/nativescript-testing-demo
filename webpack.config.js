@@ -14,10 +14,6 @@ module.exports = (env) => {
 			// reference for changing an existing plugin
 			// https://docs.nativescript.org/webpack.html#changing-an-existing-plugin-configuration
 			webpack.chainWebpack((config) => {
-				config.plugin("AngularWebpackPlugin").tap((args) => {
-					args[0].tsconfig = "./tsconfig.spec.json";
-					return args;
-				});
 	
 				console.log("Setting test runner to stay open");
 				config.plugin('DefinePlugin').tap((args) => {
