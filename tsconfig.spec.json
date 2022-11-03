@@ -1,9 +1,18 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true
+  },
+  "files": [
+    "src/test.ts"
+  ],
   "include": [
-    "./src/tests/test-main.ts",
-    "./src/tests/*.spec.ts",
-    "./src/tests/**/*.spec.ts",
-    "**/*.d.ts"
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "platforms",
+    "e2e"
   ]
 }
